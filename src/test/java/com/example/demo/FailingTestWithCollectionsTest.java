@@ -21,7 +21,7 @@ public class FailingTestWithCollectionsTest {
 
     @Test
     public void test() {
-        given(testCollectionSourceProvider.getCollection(new ArrayList<>())).willReturn(new ArrayList<>());
+        given(testCollectionSourceProvider.getCollection(new ArrayList<Integer>())).willReturn(new ArrayList<>());
     }
 
     static class TestCollectionSourceProvider {
