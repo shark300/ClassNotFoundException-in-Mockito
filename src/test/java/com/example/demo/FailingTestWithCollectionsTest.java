@@ -21,11 +21,11 @@ public class FailingTestWithCollectionsTest {
 
     @Test
     public void test() {
-        given(testCollectionSourceProvider.getCollection(new ArrayList<>(), Long.class)).willReturn(new ArrayList<>());
+        given(testCollectionSourceProvider.getCollection(new ArrayList<>())).willReturn(new ArrayList<>());
     }
 
     static class TestCollectionSourceProvider {
-        <T extends Collection<E>, E> T getCollection(T collection, Class<E> elementType) {
+        <T extends Collection<E>, E> T getCollection(T collection) {
             return collection;
         }
     }
