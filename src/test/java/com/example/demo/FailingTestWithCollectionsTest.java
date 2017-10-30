@@ -27,22 +27,22 @@ public class FailingTestWithCollectionsTest {
 
     @Test
     public void test2() {
-        List<Integer> collection = testCollectionSourceProvider.getCollection(new ArrayList<>());
-        given(collection).willReturn(new ArrayList<>());
+        List<Integer> extractedToNewVariableGetCollectionResult = testCollectionSourceProvider.getCollection(new ArrayList<>());
+        given(extractedToNewVariableGetCollectionResult).willReturn(new ArrayList<>());
     }
 
     @Test
     public void test2andhalf() {
-        ArrayList<Integer> collection = testCollectionSourceProvider.getCollection(new ArrayList<>());
-        given(collection).willReturn(new ArrayList<>());
+        ArrayList<Integer> extractedToNewVariableGetCollectionResult = testCollectionSourceProvider.getCollection(new ArrayList<>());
+        given(extractedToNewVariableGetCollectionResult).willReturn(new ArrayList<>());
     }
 
     @Test
     public void test3() {
         List<Integer> input = new ArrayList<>();
         List<Integer> output = new ArrayList<>();
-        List<Integer> collection = testCollectionSourceProvider.getCollection(input);
-        given(collection).willReturn(output);
+        List<Integer> extractedToNewVariableGetCollectionResult = testCollectionSourceProvider.getCollection(input);
+        given(extractedToNewVariableGetCollectionResult).willReturn(output);
     }
 
     static class TestCollectionSourceProvider {
