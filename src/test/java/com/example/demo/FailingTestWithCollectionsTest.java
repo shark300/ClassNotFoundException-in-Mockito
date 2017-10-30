@@ -32,6 +32,12 @@ public class FailingTestWithCollectionsTest {
     }
 
     @Test
+    public void test2andhalf() {
+        ArrayList<Integer> collection = testCollectionSourceProvider.getCollection(new ArrayList<>());
+        given(collection).willReturn(new ArrayList<>());
+    }
+
+    @Test
     public void test3() {
         List<Integer> input = new ArrayList<>();
         List<Integer> output = new ArrayList<>();
