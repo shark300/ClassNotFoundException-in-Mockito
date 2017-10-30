@@ -28,13 +28,13 @@ public class FailingTestWithCollectionsTest {
     @Test
     public void test2() {
         List<Integer> collection = testCollectionSourceProvider.getCollection(new ArrayList<>());
-        given(testCollectionSourceProvider.getCollection(collection)).willReturn(new ArrayList<>());
+        given(collection).willReturn(new ArrayList<>());
     }
 
     @Test
     public void test2andhalf() {
         ArrayList<Integer> collection = testCollectionSourceProvider.getCollection(new ArrayList<>());
-        given(testCollectionSourceProvider.getCollection(collection)).willReturn(new ArrayList<>());
+        given(collection).willReturn(new ArrayList<>());
     }
 
     @Test
@@ -42,7 +42,7 @@ public class FailingTestWithCollectionsTest {
         List<Integer> input = new ArrayList<>();
         List<Integer> output = new ArrayList<>();
         List<Integer> collection = testCollectionSourceProvider.getCollection(input);
-        given(testCollectionSourceProvider.getCollection(collection)).willReturn(output);
+        given(collection).willReturn(output);
     }
 
     static class TestCollectionSourceProvider {
